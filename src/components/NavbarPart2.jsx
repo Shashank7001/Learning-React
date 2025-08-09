@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function NavbarPart2() {
   return (
     <>
     <div className="flex gap-10 items-center justify-between bg-blue-500 p-4">
-            <h4 className="text-white font-bold">Home</h4>
-            <h4 className="text-white font-bold">About</h4>
-            <h4 className="text-white font-bold">Contact</h4>
-            <h4 className="text-white font-bold">Services</h4>
-    </div>
+            <Link to="/" className="text-white font-bold">Home</Link>
+            <Link to="/about" className="text-white font-bold">About</Link>
+            <Link to="/product" className="text-white font-bold">Product</Link> 
+            <Link to="/contact" className="text-white font-bold">Contact</Link>
+        </div>
     </>
        
     

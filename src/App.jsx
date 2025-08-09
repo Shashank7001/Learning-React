@@ -164,16 +164,92 @@
 // }
 // export default App;
 
-import React from "react";
-import Examp from "./components/Examp";
-function App() {
+// import React from "react";
+// import Examp from "./components/Examp";
+// function App() {
+//   return (
+//     <>
+//     <Examp name="Shashank"/>
+//       <h1 className="text-white font-bold text-5xl text-center bg-black h-screen flex items-center justify-center">
+//         Hello, World!
+//       </h1>
+//     </>
+//   );
+// }
+// import React, { useState,useEffect } from "react";
+// import axios from "axios";
+
+// function App() {
+//   const [data, setData] = React.useState([]);
+//   const getData= async ( ) =>{
+//     const response = await axios.get("https://picsum.photos/v2/list")
+ 
+//   setData(response.data);
+//   console.log(data);
+//     }
+
+//     useEffect(() => {
+//       getData();
+//     }, []);
+
+//   return (
+//    <div className="">
+//     {/* <button onClick={getData} className="bg-blue-500 text-white px-4 py-2 rounded font-semibold hover:bg-blue-600 transition duration-300 active:scale-90">Click</button> */}
+//    <div className="justify-between items-center p-10 bg-gray-500 font-bold">
+//     {data.map(function(elm, idx) {
+//       return <div className="bg-black-500 text-white " key={idx}  style={{width: "600px", height: "600px"}}>
+//               {elm.id} {elm.author}
+//         <img src={elm.download_url} alt={elm.author} className="w-full h-full object-cover rounded-lg" />
+//       </div>
+//       {elm.id} {elm.author}
+//     })}
+//    </div>
+//    </div>
+//   );
+// }
+// export default App;
+
+
+//react-router-dom
+// import React from 'react'
+// import { Routes,Route } from 'react-router-dom'
+// import About from './pages/About';
+// import Contact from './pages/Contact';
+// import Home from './pages/Home';
+// import Product from './pages/Product';
+// import Navbar from './components/Navbar';
+
+// const App = () => {
+//   return (
+//     <div className='bg-black min-h-screen p-5 text-white font-bold font-sans'>
+      
+//       <Navbar />
+//       <Routes>
+//         <Route path="/about" element={<About />} />
+//         <Route path="/contact" element={<Contact />} />
+//         <Route path="/product" element={<Product />} />
+//         <Route path="/" element={<Home />} />
+//       </Routes>
+      
+      
+//       </div>
+//   )
+// }
+
+// export default App
+
+//context api
+import React, { useContext } from 'react'
+import { DataContext } from './context/UserContext.jsx';
+
+
+
+const App = () => {
+  const data = useContext(DataContext);
+  console.log(data);
   return (
-    <>
-    <Examp name="Shashank"/>
-      <h1 className="text-white font-bold text-5xl text-center bg-black h-screen flex items-center justify-center">
-        Hello, World!
-      </h1>
-    </>
-  );
+    <div>App</div>
+  )
 }
-export default App;
+
+export default App
